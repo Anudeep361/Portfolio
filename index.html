@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b0f17" />
-  <meta name="description" content="Sai Anudeep Kashetty — Senior Data Scientist & AI/ML Engineer. Fraud, Churn, NLP/LLM (RAG), MLOps, Cloud." />
+  <meta name="theme-color" content="#050814" />
+  <meta name="description" content="Sai Anudeep Kashetty — Senior Data Scientist & AI/ML Engineer. Fraud, churn, GenAI (RAG), and MLOps." />
 
-  <!-- Open Graph (for LinkedIn previews) -->
+  <!-- Social preview -->
   <meta property="og:title" content="Sai Anudeep Kashetty | Senior Data Scientist" />
-  <meta property="og:description" content="Production ML & GenAI systems: fraud detection, churn modeling, RAG apps, and MLOps on AWS/Azure/GCP." />
+  <meta property="og:description" content="Production ML & GenAI systems: fraud detection, churn, RAG apps, and MLOps on cloud." />
   <meta property="og:type" content="website" />
 
-  <title>Sai Anudeep Kashetty | Senior Data Scientist</title>
+  <title>Sai Anudeep Kashetty | Portfolio</title>
 
-  <!-- Premium font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -27,270 +27,268 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Top Gradient / Glow -->
-  <div class="bg-glow" aria-hidden="true"></div>
+  <!-- Background (animated blobs + subtle noise) -->
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
 
   <header class="header" id="top">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">Sai Anudeep Kashetty</span>
+        <span class="brandMark"></span>
+        <span class="brandText">Sai Anudeep Kashetty</span>
+        <span class="brandRole">Senior Data Scientist</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#impact">Impact</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#kashnex">KashNex</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav class="links" aria-label="Primary navigation" id="navLinks">
+        <a href="#about" data-link>About</a>
+        <a href="#skills" data-link>Skills</a>
+        <a href="#experience" data-link>Experience</a>
+        <a href="#kashnex" data-link>KashNex</a>
+        <a href="#projects" data-link>Projects</a>
+        <a href="#contact" data-link>Contact</a>
       </nav>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="navRight">
+        <button class="theme" id="themeBtn" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <a class="btn small glow" href="#contact"><i class="bi bi-send"></i> Hire / Collaborate</a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero section show" id="home">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <div class="pill">
-            <span class="dot"></span>
-            <span>Senior Data Scientist • AI/ML Engineer • GenAI</span>
+    <section class="hero">
+      <div class="container heroGrid">
+        <div class="heroLeft" data-reveal>
+          <div class="eyebrow">
+            <span class="chip"><i class="bi bi-stars"></i> ML • GenAI • MLOps</span>
+            <span class="chip mono">Available: Remote / Hybrid</span>
           </div>
 
-          <h1>
-            I build <span class="grad">production-grade ML & GenAI</span> systems that
-            reduce risk, improve retention, and speed up operations.
+          <h1 class="title">
+            I build <span class="gradText">production ML & GenAI</span> systems that
+            <span class="underline">reduce risk</span>, improve retention, and speed up operations.
           </h1>
 
-          <p class="lead">
-            5+ years delivering end-to-end ML across finance and healthcare:
-            fraud detection, churn modeling, NLP/LLM apps (RAG), and MLOps on AWS/Azure/GCP.
+          <p class="subtitle">
+            5+ years across finance and healthcare — fraud detection, churn & segmentation,
+            RAG apps, and end-to-end MLOps on AWS/Azure/GCP.
           </p>
 
-          <div class="cta">
-            <a class="btn primary" href="#projects"><i class="bi bi-lightning-charge"></i> View Projects</a>
-            <a class="btn" href="#contact"><i class="bi bi-chat-dots"></i> Contact</a>
-            <a class="btn ghost" id="resumeBtn" href="#" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-arrow-down"></i> Download Resume
+          <div class="ctaRow">
+            <a class="btn primary glow" href="#projects"><i class="bi bi-lightning-charge"></i> View Work</a>
+            <a class="btn" href="#experience"><i class="bi bi-briefcase"></i> Experience</a>
+            <a class="btn ghost" id="resumeLink" href="./resume.pdf" target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-arrow-down"></i> Resume
             </a>
           </div>
 
-          <div class="hero-links">
-            <a class="iconlink" target="_blank" rel="noopener" href="https://linkedin.com/in/sai-anudeep-kashetty/">
-              <i class="bi bi-linkedin"></i> LinkedIn
-            </a>
-            <a class="iconlink" href="mailto:saianudeep.kbs24@gmail.com">
+          <div class="quickLinks">
+            <a class="pillLink" href="mailto:saianudeep.kbs24@gmail.com">
               <i class="bi bi-envelope"></i> saianudeep.kbs24@gmail.com
             </a>
-            <span class="meta"><i class="bi bi-geo-alt"></i> Plano, TX</span>
+            <a class="pillLink" target="_blank" rel="noopener" href="https://linkedin.com/in/sai-anudeep-kashetty/">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <span class="pillLink muted"><i class="bi bi-geo-alt"></i> Plano, TX</span>
           </div>
 
-          <div class="metrics">
-            <div class="metric">
-              <div class="metric-top">
-                <span class="metric-num">12–18%</span>
-                <span class="metric-tag">Fraud</span>
+          <div class="stats" data-reveal>
+            <div class="statCard tilt">
+              <div class="statTop">
+                <div class="statNum">12–18%</div>
+                <div class="statTag">Fraud</div>
               </div>
-              <div class="metric-label">Reduction in fraud false positives</div>
+              <div class="statLabel">Lower fraud false positives</div>
             </div>
-            <div class="metric">
-              <div class="metric-top">
-                <span class="metric-num">15%</span>
-                <span class="metric-tag">Retention</span>
+            <div class="statCard tilt">
+              <div class="statTop">
+                <div class="statNum">15%</div>
+                <div class="statTag">Retention</div>
               </div>
-              <div class="metric-label">Improvement in targeting effectiveness</div>
+              <div class="statLabel">Better targeting effectiveness</div>
             </div>
-            <div class="metric">
-              <div class="metric-top">
-                <span class="metric-num">30%</span>
-                <span class="metric-tag">Automation</span>
+            <div class="statCard tilt">
+              <div class="statTop">
+                <div class="statNum">30%</div>
+                <div class="statTag">GenAI</div>
               </div>
-              <div class="metric-label">Time saved via LLM-enabled workflows</div>
+              <div class="statLabel">Time saved via automation</div>
             </div>
           </div>
         </div>
 
-        <aside class="hero-right">
-          <div class="card glass">
-            <div class="card-head">
-              <h2>What I’m known for</h2>
-              <p class="muted">Fast execution, clean engineering, measurable outcomes.</p>
+        <aside class="heroRight" data-reveal>
+          <div class="glassCard">
+            <div class="glassHead">
+              <div class="badge">
+                <span class="pulse"></span>
+                <span class="mono">Now</span>
+              </div>
+              <h2>What I deliver</h2>
+              <p class="muted">Clean engineering + reliable evaluation + measurable outcomes.</p>
             </div>
 
-            <ul class="checklist">
-              <li><i class="bi bi-check2"></i> Fraud models on 3M+ transactions (XGBoost/LightGBM/PyTorch)</li>
-              <li><i class="bi bi-check2"></i> Churn + segmentation for retention strategy (claims/EHR)</li>
-              <li><i class="bi bi-check2"></i> RAG, semantic search, doc Q&A (FAISS/Pinecone/Chroma)</li>
-              <li><i class="bi bi-check2"></i> MLOps: MLflow, CI/CD, Docker, monitoring, drift checks</li>
-            </ul>
+            <div class="list">
+              <div class="li">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                  <div class="liTitle">Fraud & risk modeling</div>
+                  <div class="liText muted">XGBoost/LightGBM/PyTorch • calibration • thresholds • explainability</div>
+                </div>
+              </div>
+              <div class="li">
+                <i class="bi bi-people"></i>
+                <div>
+                  <div class="liTitle">Churn + segmentation</div>
+                  <div class="liText muted">Claims/EHR data • cohort analysis • uplift-driven targeting</div>
+                </div>
+              </div>
+              <div class="li">
+                <i class="bi bi-chat-square-text"></i>
+                <div>
+                  <div class="liTitle">RAG & document intelligence</div>
+                  <div class="liText muted">Embeddings • vector DB • evidence-grounded answers</div>
+                </div>
+              </div>
+              <div class="li">
+                <i class="bi bi-gear-wide-connected"></i>
+                <div>
+                  <div class="liTitle">MLOps & deployment</div>
+                  <div class="liText muted">MLflow • CI/CD • Docker • monitoring • drift checks</div>
+                </div>
+              </div>
+            </div>
 
-            <div class="card-actions">
-              <a class="btn small" href="#experience"><i class="bi bi-briefcase"></i> Experience</a>
-              <a class="btn small ghost" href="#skills"><i class="bi bi-cpu"></i> Tech Stack</a>
+            <div class="glassActions">
+              <a class="btn small" href="#contact"><i class="bi bi-send"></i> Message</a>
+              <a class="btn small ghost" href="#projects"><i class="bi bi-grid-3x3-gap"></i> Projects</a>
             </div>
           </div>
 
-          <div class="mini-card">
-            <div class="mini-title"><i class="bi bi-stars"></i> Focus</div>
-            <p class="muted">
-              Practical ML + scalable pipelines + reliable deployment.
-              I optimize for correctness, latency, and business impact.
-            </p>
+          <div class="codeCard tilt">
+            <div class="codeTop">
+              <span class="dot red"></span><span class="dot yel"></span><span class="dot grn"></span>
+              <span class="mono muted">impact.ts</span>
+            </div>
+            <pre class="code mono"><code>const outcomes = {
+  fraud_false_pos: "-12% to -18%",
+  alert_precision: "+17% to +21%",
+  retention_targeting: "+15%",
+  genai_time_saved: "-30%"
+}</code></pre>
           </div>
         </aside>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
+    <section class="section" id="about" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>About</h2>
-          <p class="muted">
-            I translate business problems into measurable ML objectives, ship production solutions,
-            and communicate outcomes clearly to technical and non-technical stakeholders.
+          <p class="muted max">
+            I specialize in taking messy, real-world data problems from idea → model → production.
+            My focus is building systems that are correct, explainable, monitored, and tied to business metrics.
           </p>
         </div>
 
-        <div class="grid2">
-          <div class="panel">
-            <h3>How I work</h3>
-            <p class="muted">
-              Define success metrics → validate data → build baselines → iterate with strong evaluation
-              (calibration, interpretability, bias checks) → deploy with monitoring and retraining signals.
-            </p>
+        <div class="twoCol">
+          <div class="panel tilt">
+            <h3>Strengths</h3>
+            <ul class="bullets">
+              <li>Problem framing → success metrics → model strategy</li>
+              <li>Feature engineering + evaluation (calibration, interpretability, drift)</li>
+              <li>Production deployment (APIs, batch pipelines, monitoring)</li>
+              <li>Clear communication to engineering + leadership</li>
+            </ul>
           </div>
 
-          <div class="panel">
-            <h3>What I build</h3>
+          <div class="panel tilt">
+            <h3>Domains</h3>
             <p class="muted">
-              Fraud/risk models, churn and segmentation, NLP & LLM apps (RAG), real-time inference services,
-              and MLOps foundations (MLflow, CI/CD, model monitoring, drift detection).
+              Finance (fraud, risk, customer intelligence) and Healthcare (claims/EHR analytics, segmentation, churn).
+              I also build GenAI tools that automate investigative and documentation workflows with guardrails.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPACT -->
-    <section class="section alt" id="impact">
-      <div class="container">
-        <div class="section-head">
-          <h2>Impact</h2>
-          <p class="muted">A few representative outcomes across recent projects.</p>
-        </div>
-
-        <div class="impact-grid">
-          <div class="impact-card">
-            <div class="impact-icon"><i class="bi bi-shield-check"></i></div>
-            <h3>Fraud precision improvements</h3>
-            <p class="muted">
-              Reduced false positives while improving alert precision—lowering manual review volume
-              and speeding up investigations.
-            </p>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <h3>Retention optimization</h3>
-            <p class="muted">
-              Churn prediction + segmentation to focus outreach on highest-risk cohorts and improve
-              targeting effectiveness.
-            </p>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-icon"><i class="bi bi-lightning"></i></div>
-            <h3>Operational acceleration with LLMs</h3>
-            <p class="muted">
-              Built RAG-style tools that summarize, retrieve evidence, and automate routine investigative tasks
-              with guardrails.
-            </p>
+            <div class="callout">
+              <i class="bi bi-award"></i>
+              <div>
+                <div class="callTitle">Style</div>
+                <div class="muted">Practical, measurable, production-first.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section class="section" id="skills">
+    <section class="section alt" id="skills" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>Skills</h2>
-          <p class="muted">Practical stack for production ML + GenAI.</p>
+          <p class="muted max">A stack built for shipping reliable ML and GenAI applications.</p>
         </div>
 
-        <div class="skill-grid">
-          <div class="skill-card">
-            <h3><i class="bi bi-braces"></i> Languages</h3>
+        <div class="skillGrid">
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-braces"></i><h3>Languages</h3></div>
             <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">SQL</span>
-              <span class="chip">R</span>
+              <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3><i class="bi bi-cpu"></i> ML / DL</h3>
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-cpu"></i><h3>ML / DL</h3></div>
             <div class="chips">
-              <span class="chip">XGBoost</span>
-              <span class="chip">LightGBM</span>
-              <span class="chip">Scikit-learn</span>
-              <span class="chip">PyTorch</span>
-              <span class="chip">TensorFlow</span>
-              <span class="chip">Imbalanced Learning</span>
-              <span class="chip">Time Series</span>
-              <span class="chip">Model Calibration</span>
+              <span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Scikit-learn</span>
+              <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Imbalanced learning</span>
+              <span class="chip">Calibration</span><span class="chip">SHAP</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3><i class="bi bi-chat-square-text"></i> NLP / GenAI</h3>
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-chat-square-text"></i><h3>NLP / GenAI</h3></div>
             <div class="chips">
-              <span class="chip">Transformers</span>
-              <span class="chip">Hugging Face</span>
-              <span class="chip">RAG</span>
-              <span class="chip">Embeddings</span>
-              <span class="chip">FAISS</span>
-              <span class="chip">Pinecone</span>
-              <span class="chip">ChromaDB</span>
-              <span class="chip">OpenAI API</span>
+              <span class="chip">Transformers</span><span class="chip">Hugging Face</span><span class="chip">RAG</span>
+              <span class="chip">Embeddings</span><span class="chip">FAISS</span><span class="chip">Pinecone</span>
+              <span class="chip">ChromaDB</span><span class="chip">OpenAI API</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3><i class="bi bi-hdd-network"></i> Data / Platforms</h3>
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-hdd-network"></i><h3>Data</h3></div>
             <div class="chips">
-              <span class="chip">Spark / PySpark</span>
-              <span class="chip">Databricks</span>
-              <span class="chip">ETL / ELT</span>
-              <span class="chip">dbt</span>
-              <span class="chip">Feature Engineering</span>
+              <span class="chip">Spark / PySpark</span><span class="chip">Databricks</span><span class="chip">ETL/ELT</span>
+              <span class="chip">dbt</span><span class="chip">Feature engineering</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3><i class="bi bi-box-seam"></i> MLOps / Deploy</h3>
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-gear-wide-connected"></i><h3>MLOps</h3></div>
             <div class="chips">
-              <span class="chip">MLflow</span>
-              <span class="chip">Docker</span>
-              <span class="chip">CI/CD</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">Flask</span>
-              <span class="chip">Monitoring</span>
-              <span class="chip">Drift Detection</span>
+              <span class="chip">MLflow</span><span class="chip">Docker</span><span class="chip">CI/CD</span>
+              <span class="chip">FastAPI</span><span class="chip">Monitoring</span><span class="chip">Drift detection</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3><i class="bi bi-cloud"></i> Cloud</h3>
+          <div class="skillCard tilt">
+            <div class="skillTop"><i class="bi bi-cloud"></i><h3>Cloud</h3></div>
             <div class="chips">
-              <span class="chip">AWS (S3, EC2, SageMaker, Glue, Athena)</span>
+              <span class="chip">AWS (S3, EC2, SageMaker)</span>
               <span class="chip">Azure (ADF, Blob)</span>
               <span class="chip">GCP (BigQuery, Vertex AI)</span>
             </div>
@@ -300,66 +298,60 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="section alt" id="experience">
+    <section class="section" id="experience" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>Experience</h2>
-          <p class="muted">Outcome-driven work across finance and healthcare.</p>
+          <p class="muted max">Outcome-driven work across finance and healthcare.</p>
         </div>
 
         <div class="timeline">
-          <article class="role">
-            <div class="role-top">
+          <article class="job tilt">
+            <div class="jobHead">
               <div>
                 <h3>Citizens Bank <span class="muted">— Data Scientist</span></h3>
-                <div class="role-meta"><i class="bi bi-calendar3"></i> Jan 2024 – Present • Plano, TX</div>
+                <div class="jobMeta mono"><i class="bi bi-calendar3"></i> Jan 2024 – Present • Plano, TX</div>
               </div>
-              <div class="role-tags">
-                <span class="tag">Fraud</span>
-                <span class="tag">XGBoost</span>
-                <span class="tag">MLOps</span>
+              <div class="tags">
+                <span class="tag">Fraud</span><span class="tag">XGBoost</span><span class="tag">MLOps</span>
               </div>
             </div>
             <ul class="bullets">
-              <li>Built fraud detection models on <b>3M+</b> transaction and customer records, reducing false positives by <b>12–18%</b> and improving alert precision by <b>~17–21%</b>.</li>
-              <li>Partnered with fraud operations and risk teams to ship model-driven workflows that lowered manual case review volume and improved investigation throughput.</li>
-              <li>Implemented production stability practices: experiment tracking, monitoring, drift checks, and retraining signals for reliable deployment.</li>
+              <li>Built fraud detection models on <b>3M+</b> records, reducing false positives by <b>12–18%</b> and improving alert precision by <b>~17–21%</b>.</li>
+              <li>Shipped model-driven workflows with fraud ops/risk teams to reduce manual review volume and improve investigation throughput.</li>
+              <li>Implemented tracking + monitoring + drift checks + retraining signals for production stability.</li>
             </ul>
           </article>
 
-          <article class="role">
-            <div class="role-top">
+          <article class="job tilt">
+            <div class="jobHead">
               <div>
-                <h3>Optum (UnitedHealth Group) <span class="muted">— Data Scientist</span></h3>
-                <div class="role-meta"><i class="bi bi-calendar3"></i> Sep 2021 – Oct 2022</div>
+                <h3>Optum (UHG) <span class="muted">— Data Scientist</span></h3>
+                <div class="jobMeta mono"><i class="bi bi-calendar3"></i> Sep 2021 – Oct 2022</div>
               </div>
-              <div class="role-tags">
-                <span class="tag">Churn</span>
-                <span class="tag">Segmentation</span>
-                <span class="tag">Claims/EHR</span>
+              <div class="tags">
+                <span class="tag">Churn</span><span class="tag">Segmentation</span><span class="tag">Claims/EHR</span>
               </div>
             </div>
             <ul class="bullets">
-              <li>Built customer segmentation and churn models using <b>EHR + claims</b> datasets to improve retention prioritization and campaign planning.</li>
-              <li>Performed EDA, feature engineering, and model evaluation to support stakeholder decisions and operational rollout.</li>
+              <li>Built churn models and segmentation using <b>claims + EHR</b> datasets to improve retention prioritization.</li>
+              <li>Delivered EDA, feature engineering, evaluation, and stakeholder-ready reporting for rollout decisions.</li>
             </ul>
           </article>
 
-          <article class="role">
-            <div class="role-top">
+          <article class="job tilt">
+            <div class="jobHead">
               <div>
                 <h3>Trident Soft Solutions <span class="muted">— Data Analyst</span></h3>
-                <div class="role-meta"><i class="bi bi-calendar3"></i> May 2020 – Aug 2021</div>
+                <div class="jobMeta mono"><i class="bi bi-calendar3"></i> May 2020 – Aug 2021</div>
               </div>
-              <div class="role-tags">
-                <span class="tag">BI</span>
-                <span class="tag">Dashboards</span>
-                <span class="tag">EDA</span>
+              <div class="tags">
+                <span class="tag">BI</span><span class="tag">Dashboards</span><span class="tag">EDA</span>
               </div>
             </div>
             <ul class="bullets">
-              <li>Delivered KPI dashboards and reporting to improve decision speed and visibility across business operations.</li>
-              <li>Standardized data cleaning + EDA workflows to reduce recurring analysis time and improve consistency.</li>
+              <li>Delivered KPI dashboards and reporting to improve decision speed and operational visibility.</li>
+              <li>Standardized data cleaning + EDA workflows to reduce recurring analysis time.</li>
             </ul>
           </article>
         </div>
@@ -367,174 +359,199 @@
     </section>
 
     <!-- KASHNEX -->
-    <section class="section" id="kashnex">
+    <section class="section alt" id="kashnex" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>KashNex</h2>
-          <p class="muted">
-            My AI/IT startup focused on applied ML, analytics, and strategic consulting.
-            (Add your official site link below when ready.)
+          <p class="muted max">
+            My AI/IT company delivering ML, analytics, and consulting solutions across finance, healthcare, education, and retail.
           </p>
         </div>
 
-        <div class="kashnex-grid">
-          <div class="panel kashnex-card">
-            <div class="kashnex-top">
-              <div class="kashnex-logo">K</div>
+        <div class="kGrid">
+          <div class="kCard tilt">
+            <div class="kTop">
+              <div class="kLogo">K</div>
               <div>
                 <h3>KashNex — AI & Data Solutions</h3>
                 <p class="muted">AI/ML • Data Analytics • Strategic Consulting</p>
               </div>
             </div>
 
-            <div class="kashnex-bullets">
-              <div class="k-item">
-                <div class="k-icon"><i class="bi bi-diagram-3"></i></div>
+            <div class="kItems">
+              <div class="kItem">
+                <i class="bi bi-robot"></i>
                 <div>
-                  <div class="k-title">Industry solutions</div>
-                  <div class="muted">Finance, Healthcare, Education, Retail</div>
+                  <div class="kTitle">GenAI applications</div>
+                  <div class="muted">RAG, document intelligence, workflow automation</div>
                 </div>
               </div>
-              <div class="k-item">
-                <div class="k-icon"><i class="bi bi-robot"></i></div>
+              <div class="kItem">
+                <i class="bi bi-diagram-3"></i>
                 <div>
-                  <div class="k-title">GenAI applications</div>
-                  <div class="muted">RAG, semantic search, document intelligence</div>
+                  <div class="kTitle">Industry solutions</div>
+                  <div class="muted">Finance, healthcare, education, retail</div>
                 </div>
               </div>
-              <div class="k-item">
-                <div class="k-icon"><i class="bi bi-gear"></i></div>
+              <div class="kItem">
+                <i class="bi bi-gear"></i>
                 <div>
-                  <div class="k-title">Production delivery</div>
-                  <div class="muted">MLOps, monitoring, and scalable deployment</div>
+                  <div class="kTitle">Production delivery</div>
+                  <div class="muted">MLOps, monitoring, cloud deployment</div>
                 </div>
               </div>
             </div>
 
-            <div class="kashnex-actions">
-              <!-- Replace these links with real ones -->
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Website</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener"><i class="bi bi-file-text"></i> Capabilities</a>
+            <div class="kActions">
+              <!-- Replace with real links -->
+              <a class="btn small primary" href="#" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Website</a>
+              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-file-text"></i> Services</a>
             </div>
           </div>
 
-          <div class="panel">
-            <h3>What we can deliver</h3>
-            <ul class="bullets">
-              <li>Customer intelligence: churn, segmentation, propensity models</li>
-              <li>Fraud/risk modeling: detection, scoring, explainability & monitoring</li>
-              <li>GenAI: RAG, search relevance, workflow automation with guardrails</li>
-              <li>Analytics: dashboards, KPI frameworks, and decision support</li>
-            </ul>
+          <div class="panel tilt">
+            <h3>What we deliver</h3>
+            <div class="serviceGrid">
+              <div class="service">
+                <div class="serviceTitle">Fraud & Risk</div>
+                <div class="muted">Scoring models, explainability, monitoring</div>
+              </div>
+              <div class="service">
+                <div class="serviceTitle">Customer Intelligence</div>
+                <div class="muted">Churn, segmentation, propensity</div>
+              </div>
+              <div class="service">
+                <div class="serviceTitle">GenAI</div>
+                <div class="muted">RAG apps with guardrails and evaluation</div>
+              </div>
+              <div class="service">
+                <div class="serviceTitle">Analytics</div>
+                <div class="muted">Dashboards and KPI frameworks</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section alt" id="projects">
+    <section class="section" id="projects" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>Projects</h2>
-          <p class="muted">Add your real GitHub/demo links — the buttons are ready.</p>
+          <p class="muted max">Replace the links with your GitHub/demo URLs. Add screenshots later for an even stronger look.</p>
         </div>
 
-        <div class="project-grid">
-          <article class="project">
-            <div class="project-top">
-              <h3>Fraud Detection Modeling Pipeline</h3>
-              <div class="project-meta">XGBoost/LightGBM • Imbalanced learning • Calibration • Monitoring</div>
+        <div class="projGrid">
+          <!-- Project 1 -->
+          <article class="proj tilt">
+            <div class="projMedia">
+              <!-- Add an image later: <img src="assets/fraud.png" alt="Fraud project screenshot"> -->
+              <div class="projMediaPlaceholder">
+                <i class="bi bi-shield-check"></i>
+                <span class="mono">fraud_pipeline</span>
+              </div>
             </div>
-            <p class="muted">
-              End-to-end training and evaluation pipeline with thresholding, interpretability,
-              and production monitoring hooks.
-            </p>
-            <div class="project-actions">
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener"><i class="bi bi-journal-text"></i> Case Study</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-top">
-              <h3>Churn Prediction + Segmentation</h3>
-              <div class="project-meta">Feature engineering • Uplift targeting • Experiment design</div>
-            </div>
-            <p class="muted">
-              Churn scoring + cohort segmentation to focus outreach and improve retention efficiency.
-              Designed evaluation to align with business targeting.
-            </p>
-            <div class="project-actions">
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener"><i class="bi bi-filetype-ipynb"></i> Notebook</a>
+            <div class="projBody">
+              <h3>Fraud Detection Pipeline</h3>
+              <p class="muted">XGBoost/LightGBM • imbalanced learning • calibration • monitoring</p>
+              <p class="muted">
+                End-to-end training + evaluation pipeline with thresholding, interpretability hooks, and production monitoring.
+              </p>
+              <div class="projActions">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-journal-text"></i> Case Study</a>
+              </div>
             </div>
           </article>
 
-          <article class="project">
-            <div class="project-top">
+          <!-- Project 2 -->
+          <article class="proj tilt">
+            <div class="projMedia">
+              <div class="projMediaPlaceholder">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span class="mono">churn_segmentation</span>
+              </div>
+            </div>
+            <div class="projBody">
+              <h3>Churn + Segmentation</h3>
+              <p class="muted">feature engineering • cohort analysis • targeting strategy</p>
+              <p class="muted">
+                Churn scoring + segmentation to focus outreach on high-risk cohorts and improve campaign efficiency.
+              </p>
+              <div class="projActions">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-filetype-ipynb"></i> Notebook</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="proj tilt">
+            <div class="projMedia">
+              <div class="projMediaPlaceholder">
+                <i class="bi bi-chat-square-text"></i>
+                <span class="mono">rag_doc_qa</span>
+              </div>
+            </div>
+            <div class="projBody">
               <h3>RAG Document Q&A</h3>
-              <div class="project-meta">Embeddings • Vector DB • Retrieval • Grounded answers</div>
-            </div>
-            <p class="muted">
-              Document Q&A using chunking + embeddings + retrieval with source-aware responses.
-              Built to reduce hallucinations and support citations.
-            </p>
-            <div class="project-actions">
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener"><i class="bi bi-play-circle"></i> Live Demo</a>
+              <p class="muted">embeddings • vector DB • retrieval • grounded answers</p>
+              <p class="muted">
+                Document Q&A with chunking + embeddings + retrieval, designed to reduce hallucinations and support citations.
+              </p>
+              <div class="projActions">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-play-circle"></i> Demo</a>
+              </div>
             </div>
           </article>
 
-          <article class="project">
-            <div class="project-top">
+          <!-- Project 4 -->
+          <article class="proj tilt">
+            <div class="projMedia">
+              <div class="projMediaPlaceholder">
+                <i class="bi bi-box-seam"></i>
+                <span class="mono">mlops_starter</span>
+              </div>
+            </div>
+            <div class="projBody">
               <h3>MLOps Starter Kit</h3>
-              <div class="project-meta">MLflow • Docker • CI/CD • FastAPI</div>
-            </div>
-            <p class="muted">
-              Template repo for training, tracking, packaging, deploying, and monitoring models consistently
-              across teams.
-            </p>
-            <div class="project-actions">
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener"><i class="bi bi-book"></i> Docs</a>
+              <p class="muted">MLflow • Docker • CI/CD • FastAPI</p>
+              <p class="muted">
+                Template repo for training, tracking, packaging, deploying, and monitoring models consistently.
+              </p>
+              <div class="projActions">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+                <a class="btn small" href="#" target="_blank" rel="noopener"><i class="bi bi-book"></i> Docs</a>
+              </div>
             </div>
           </article>
-        </div>
-
-        <div class="note-bar">
-          <div class="note-left">
-            <i class="bi bi-info-circle"></i>
-            <div>
-              <div class="note-title">Want it more premium?</div>
-              <div class="muted">I can add Dark/Light toggle, blog section, project screenshots, and SEO preview image.</div>
-            </div>
-          </div>
-          <a class="btn small" href="#contact"><i class="bi bi-send"></i> Ask Me</a>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section" id="contact">
+    <section class="section alt" id="contact" data-reveal>
       <div class="container">
-        <div class="section-head">
+        <div class="head">
           <h2>Contact</h2>
-          <p class="muted">Fastest way: email or LinkedIn. Form opens your email client (no backend).</p>
+          <p class="muted max">Email + LinkedIn are fastest. The form opens your email client (no backend).</p>
         </div>
 
-        <div class="contact-grid">
-          <div class="panel">
+        <div class="contactGrid">
+          <div class="panel tilt">
             <h3>Details</h3>
-            <div class="contact-list">
-              <div class="contact-row">
+            <div class="rows">
+              <div class="row">
                 <span class="muted"><i class="bi bi-envelope"></i> Email</span>
                 <a href="mailto:saianudeep.kbs24@gmail.com">saianudeep.kbs24@gmail.com</a>
               </div>
-              <div class="contact-row">
+              <div class="row">
                 <span class="muted"><i class="bi bi-linkedin"></i> LinkedIn</span>
                 <a target="_blank" rel="noopener" href="https://linkedin.com/in/sai-anudeep-kashetty/">linkedin.com/in/sai-anudeep-kashetty</a>
               </div>
-              <div class="contact-row">
+              <div class="row">
                 <span class="muted"><i class="bi bi-geo-alt"></i> Location</span>
                 <span class="muted">Plano, TX</span>
               </div>
@@ -542,37 +559,30 @@
 
             <div class="divider"></div>
 
-            <h3>Availability</h3>
-            <p class="muted">
-              Open to Senior Data Scientist / AI/ML Engineer roles (Remote/Hybrid). Comfortable with W2/Full-time.
-            </p>
+            <div class="availability">
+              <div class="availTitle mono"><i class="bi bi-check2-circle"></i> Open to roles</div>
+              <div class="muted">Senior Data Scientist / AI-ML Engineer • Remote/Hybrid</div>
+            </div>
           </div>
 
-          <form class="panel form" id="contactForm">
-            <h3>Quick message</h3>
+          <form class="panel form tilt" id="contactForm">
+            <h3>Send a message</h3>
 
             <label>
               Name
-              <input type="text" name="name" placeholder="Your name" required />
+              <input name="name" type="text" placeholder="Your name" required />
             </label>
-
             <label>
               Email
-              <input type="email" name="email" placeholder="your@email.com" required />
+              <input name="email" type="email" placeholder="your@email.com" required />
             </label>
-
             <label>
               Message
-              <textarea name="message" rows="6" placeholder="Tell me what you're looking for (role, project, timeline)..." required></textarea>
+              <textarea name="message" rows="6" placeholder="Role, project, timeline..." required></textarea>
             </label>
 
-            <button class="btn primary" type="submit">
-              <i class="bi bi-send"></i> Send
-            </button>
-
-            <p class="muted tiny">
-              No backend used. If you want a real form submission (Netlify Forms / serverless), tell me.
-            </p>
+            <button class="btn primary glow" type="submit"><i class="bi bi-send"></i> Send</button>
+            <p class="muted tiny">No backend. If you want Netlify/serverless form handling, tell me.</p>
           </form>
         </div>
       </div>
@@ -580,7 +590,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-row">
+    <div class="container foot">
       <span class="muted">© <span id="year"></span> Sai Anudeep Kashetty</span>
       <a class="btn small ghost" href="#top"><i class="bi bi-arrow-up"></i> Back to top</a>
     </div>
@@ -589,4 +599,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
